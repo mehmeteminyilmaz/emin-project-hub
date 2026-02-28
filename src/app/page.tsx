@@ -36,13 +36,50 @@ const projects = [
     status: "Completed",
     tech: ["C++", "Arduino"],
   },
+  {
+    id: 5,
+    name: "AI Note Summarizer",
+    status: "Completed",
+    tech: ["React", "Google Gemini API"],
+  },
+  {
+    id: 6,
+    name: "News Bias Detector",
+    status: "Completed",
+    tech: ["React", "Google Gemini API"],
+  },
+  {
+    id: 7,
+    name: "Film Recommendation Engine",
+    status: "Completed",
+    tech: ["React", "Google Gemini API"],
+  },
+  {
+    id: 8,
+    name: "Expense Tracker",
+    status: "Completed",
+    tech: ["React", "Firebase", "Chart.js"],
+  },
+  {
+    id: 9,
+    name: "Real-time Chat App",
+    status: "Completed",
+    tech: ["React", "Node.js", "Socket.io"],
+  },
+  {
+    id: 10,
+    name: "Pomodoro & Todo App",
+    status: "Completed",
+    tech: ["React", "Web Audio API"],
+  },
 ];
 
 const techDistribution = [
-  { name: "Mobile", value: 40, color: "#6366f1" }, // Indigo
+  { name: "AI/LLM", value: 30, color: "#a855f7" }, // Purple
+  { name: "Mobile", value: 20, color: "#6366f1" }, // Indigo
   { name: "Web", value: 30, color: "#06b6d4" }, // Cyan
-  { name: "Logic/Backend", value: 20, color: "#10b981" }, // Emerald
-  { name: "Embedded", value: 10, color: "#f59e0b" }, // Amber
+  { name: "Logic/Backend", value: 15, color: "#10b981" }, // Emerald
+  { name: "Embedded", value: 5, color: "#f59e0b" }, // Amber
 ];
 
 // Custom Tooltip Component
@@ -123,7 +160,7 @@ export default function Dashboard() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-slate-400 text-sm mb-1">Total Projects</p>
-                <p className="text-3xl font-bold text-white">4</p>
+                <p className="text-3xl font-bold text-white">{projects.length}</p>
               </div>
               <div className="w-12 h-12 rounded-lg bg-indigo-500/20 flex items-center justify-center">
                 <Folder className="w-6 h-6 text-indigo-400" />
@@ -203,7 +240,7 @@ export default function Dashboard() {
         </div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {projects.map((project) => (
             <div
               key={project.id}
